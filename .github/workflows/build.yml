@@ -9,11 +9,13 @@ on:
       - develop
 
 permissions:
-  actions: write
   checks: write
   contents: read
   pull-requests: write
   id-token: write
+  # Warp cache
+  actions: read
+  packages: read
 
 jobs:
   build:
