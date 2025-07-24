@@ -8,7 +8,12 @@ on:
       - main
       - develop
 
-permissions: read-all
+permissions:
+  actions: read
+  contents: read
+  checks: read
+  pull-requests: read
+  statuses: read
 
 jobs:
   build:
