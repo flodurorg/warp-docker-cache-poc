@@ -1,9 +1,13 @@
 # Build application
 name: Build & Test
 on:
+  pull_request:
+    types: [opened, ready_for_review, reopened, synchronize]
   push:
     branches:
       - main
+      - develop
+permissions: write-all
 
 jobs:
   build:
