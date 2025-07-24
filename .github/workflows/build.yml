@@ -9,21 +9,20 @@ on:
       - develop
 
 permissions:
+  actions: write
+  attestations: write
   checks: write
-  contents: read
-  pull-requests: write
+  contents: write
+  deployments: write
   id-token: write
-  # Warp cache
-  actions: read
-  packages: read
-  attestations: read
-  deployments: read
-  issues: read
+  issues: write
   models: read
-  discussions: read
-  pages: read
-  security-events: read
-  statuses: read
+  discussions: write
+  packages: write
+  pages: write
+  pull-requests: write
+  security-events: write
+  statuses: write
 
 jobs:
   build:
