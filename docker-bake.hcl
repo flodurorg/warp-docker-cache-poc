@@ -4,12 +4,12 @@ variable "CACHE" {
 
 group "default" {
   targets = [
-    "node",
-    "chrome",
-    "firefox",
-    "python",
-    "golang",
-    "vscode"
+    "long-target-name-node",
+    "long-target-name-chrome",
+    "long-target-name-firefox",
+    "long-target-name-python",
+    "long-target-name-golang",
+    "long-target-name-vscode"
   ]
 }
 
@@ -19,7 +19,7 @@ target "base" {
   platforms  = ["linux/amd64"]
 }
 
-target "node" {
+target "long-target-name-node" {
   inherits = ["base"]
   tags     = ["downloader:node"]
   args = {
@@ -29,7 +29,7 @@ target "node" {
   cache-to   = ["${CACHE},scope=my-test-scope-long-name-node"]
 }
 
-target "chrome" {
+target "long-target-name-chrome" {
   inherits = ["base"]
   tags     = ["downloader:chrome"]
   args = {
@@ -39,7 +39,7 @@ target "chrome" {
   cache-to   = ["${CACHE},scope=my-test-scope-long-name-chrome"]
 }
 
-target "firefox" {
+target "long-target-name-firefox" {
   inherits = ["base"]
   tags     = ["downloader:firefox"]
   args = {
@@ -49,7 +49,7 @@ target "firefox" {
   cache-to   = ["${CACHE},scope=my-test-scope-long-name-firefox"]
 }
 
-target "python" {
+target "long-target-name-python" {
   inherits = ["base"]
   tags     = ["downloader:python"]
   args = {
@@ -59,7 +59,7 @@ target "python" {
   cache-to   = ["${CACHE},scope=my-test-scope-long-name-python"]
 }
 
-target "golang" {
+target "long-target-name-golang" {
   inherits = ["base"]
   tags     = ["downloader:golang"]
   args = {
@@ -69,7 +69,7 @@ target "golang" {
   cache-to   = ["${CACHE},scope=my-test-scope-long-name-golang"]
 }
 
-target "vscode" {
+target "long-target-name-vscode" {
   inherits = ["base"]
   tags     = ["downloader:vscode"]
   args = {
