@@ -1,12 +1,6 @@
 # Build application
 name: Build & Test
-
 on:
-  pull_request:
-    types:
-      - opened
-      - reopened
-      - synchronize
   push:
     branches:
       - main
@@ -28,7 +22,7 @@ jobs:
           files: |
             docker-bake.hcl
           push: false
-          load: false
+          load: true
           allow: network.host,security.insecure,ssh
           source: .
-          targets: default
+          targets: test
