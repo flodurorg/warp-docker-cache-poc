@@ -9,20 +9,10 @@ on:
       - develop
 
 permissions:
-  actions: write
-  attestations: write
   checks: write
-  contents: write
-  deployments: write
-  id-token: write
-  issues: write
-  models: read
-  discussions: write
-  packages: write
-  pages: write
+  contents: read
   pull-requests: write
-  security-events: write
-  statuses: write
+  id-token: write
 
 jobs:
   build:
