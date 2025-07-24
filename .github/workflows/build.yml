@@ -8,12 +8,7 @@ on:
       - main
       - develop
 
-permissions:
-  actions: write
-  checks: write
-  contents: read
-  pull-requests: write
-  id-token: write
+permissions: read-all
 
 jobs:
   build:
