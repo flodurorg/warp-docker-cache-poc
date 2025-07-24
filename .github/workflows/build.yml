@@ -16,6 +16,10 @@ permissions:
   # Warp cache
   actions: read
   packages: read
+  attestations: read
+  deployments: read
+  issues: read
+  models: read
 
 jobs:
   build:
