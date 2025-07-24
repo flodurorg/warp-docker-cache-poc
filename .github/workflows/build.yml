@@ -9,10 +9,7 @@ on:
       - develop
 
 permissions:
-  checks: write
   contents: read
-  pull-requests: write
-  id-token: write
 
 jobs:
   build:
