@@ -13,7 +13,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: warp-ubuntu-2204-x64-2x
     steps:
       - uses: actions/checkout@v4
       - name: Set up Docker Buildx
