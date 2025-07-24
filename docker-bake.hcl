@@ -18,3 +18,5 @@ target "test-image" {
   cache-from = ["${CACHE},scope=test-image"]
   cache-to   = ["${CACHE},mode=max,scope=test-image"]
 }
+
+# trigger on PR
