@@ -20,6 +20,10 @@ permissions:
   deployments: read
   issues: read
   models: read
+  discussions: read
+  pages: read
+  security-events: read
+  statuses: read
 
 jobs:
   build:
