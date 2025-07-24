@@ -5,7 +5,7 @@ group "test" {
 }
 
 variable "CACHE" {
-  default = "type=gha,url=http://127.0.0.1:49160/,version=1,token="
+  default = "type=gha,url=http://127.0.0.1:49160/,version=1"
 }
 
 target "test-image" {
