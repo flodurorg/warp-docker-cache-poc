@@ -9,6 +9,7 @@ on:
       - develop
 
 permissions:
+  actions: write
   checks: write
   contents: read
   pull-requests: write
