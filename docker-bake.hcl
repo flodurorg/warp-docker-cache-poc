@@ -25,8 +25,8 @@ target "node" {
   args = {
     PACKAGE_URL = "https://nodejs.org/dist/v20.11.1/node-v20.11.1-linux-x64.tar.gz"
   }
-  cache-from = ["${CACHE},scope=node"]
-  cache-to   = ["${CACHE},scope=node"]
+  cache-from = ["${CACHE},scope=my-test-scope-long-name-node"]
+  cache-to   = ["${CACHE},scope=my-test-scope-long-name-node"]
 }
 
 target "chrome" {
@@ -35,8 +35,8 @@ target "chrome" {
   args = {
     PACKAGE_URL = "https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
   }
-  cache-from = ["${CACHE},scope=chrome"]
-  cache-to   = ["${CACHE},scope=chrome"]
+  cache-from = ["${CACHE},scope=my-test-scope-long-name-chrome"]
+  cache-to   = ["${CACHE},scope=my-test-scope-long-name-chrome"]
 }
 
 target "firefox" {
@@ -45,8 +45,8 @@ target "firefox" {
   args = {
     PACKAGE_URL = "https://download.mozilla.org/?product=firefox-latest&os=linux64&lang=en-US"
   }
-  cache-from = ["${CACHE},scope=firefox"]
-  cache-to   = ["${CACHE},scope=firefox"]
+  cache-from = ["${CACHE},scope=my-test-scope-long-name-firefox"]
+  cache-to   = ["${CACHE},scope=my-test-scope-long-name-firefox"]
 }
 
 target "python" {
@@ -55,8 +55,8 @@ target "python" {
   args = {
     PACKAGE_URL = "https://www.python.org/ftp/python/3.12.2/Python-3.12.2.tgz"
   }
-  cache-from = ["${CACHE},scope=python"]
-  cache-to   = ["${CACHE},scope=python"]
+  cache-from = ["${CACHE},scope=my-test-scope-long-name-python"]
+  cache-to   = ["${CACHE},scope=my-test-scope-long-name-python"]
 }
 
 target "golang" {
@@ -65,8 +65,8 @@ target "golang" {
   args = {
     PACKAGE_URL = "https://go.dev/dl/go1.22.0.linux-amd64.tar.gz"
   }
-  cache-from = ["${CACHE},scope=golang"]
-  cache-to   = ["${CACHE},scope=golang"]
+  cache-from = ["${CACHE},scope=my-test-scope-long-name-golang"]
+  cache-to   = ["${CACHE},scope=my-test-scope-long-name-golang"]
 }
 
 target "vscode" {
@@ -75,6 +75,6 @@ target "vscode" {
   args = {
     PACKAGE_URL = "https://update.code.visualstudio.com/latest/linux-deb-x64/stable"
   }
-  cache-from = ["${CACHE},scope=vscode"]
-  cache-to   = ["${CACHE},scope=vscode"]
+  cache-from = ["${CACHE},scope=my-test-scope-long-name-vscode"]
+  cache-to   = ["${CACHE},scope=my-test-scope-long-name-vscode"]
 }
