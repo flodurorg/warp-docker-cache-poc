@@ -17,6 +17,8 @@ target "base" {
   context    = "."
   dockerfile = "Dockerfile"
   platforms  = ["linux/amd64"]
+  cache-from = ["${CACHE},scope=common-cache"]
+  cache-to   = ["${CACHE},scope=common-cache"]
 }
 
 target "long-target-name-node" {
