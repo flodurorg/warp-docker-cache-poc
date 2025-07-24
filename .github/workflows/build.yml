@@ -7,14 +7,7 @@ on:
     branches:
       - main
       - develop
-permissions:
-  actions: write
-  packages: write
-  statuses: write
-  checks: write
-  contents: read
-  pull-requests: write
-  id-token: write
+
 jobs:
   build:
     runs-on: warp-ubuntu-2204-x64-2x
