@@ -8,7 +8,7 @@ on:
       - main
       - develop
 
-permissions: read-all
+# permissions: read-all
 
 jobs:
   build:
