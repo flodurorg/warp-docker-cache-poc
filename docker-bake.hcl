@@ -3,7 +3,14 @@ variable "CACHE" {
 }
 
 group "default" {
-  targets = ["node", "chrome", "firefox"]
+  targets = [
+    "node",
+    "chrome",
+    "firefox",
+    "python",
+    "golang",
+    "vscode"
+  ]
 }
 
 target "base" {
@@ -40,4 +47,34 @@ target "firefox" {
   }
   cache-from = ["${CACHE},scope=firefox"]
   cache-to   = ["${CACHE},scope=firefox"]
+}
+
+target "python" {
+  inherits = ["base"]
+  tags     = ["downloader:python"]
+  args = {
+    PACKAGE_URL = "https://www.python.org/ftp/python/3.12.2/Python-3.12.2.tgz"
+  }
+  cache-from = ["${CACHE},scope=python"]
+  cache-to   = ["${CACHE},scope=python"]
+}
+
+target "golang" {
+  inherits = ["base"]
+  tags     = ["downloader:golang"]
+  args = {
+    PACKAGE_URL = "https://go.dev/dl/go1.22.0.linux-amd64.tar.gz"
+  }
+  cache-from = ["${CACHE},scope=golang"]
+  cache-to   = ["${CACHE},scope=golang"]
+}
+
+target "vscode" {
+  inherits = ["base"]
+  tags     = ["downloader:vscode"]
+  args = {
+    PACKAGE_URL = "https://update.code.visualstudio.com/latest/linux-deb-x64/stable"
+  }
+  cache-from = ["${CACHE},scope=vscode"]
+  cache-to   = ["${CACHE},scope=vscode"]
 }
